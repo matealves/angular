@@ -11,4 +11,5 @@ export class FirstComponentComponent {
   job: string = 'Desenvolvedor';
   hobbies: string[] = ['Futebol', 'Séries', 'Tecnologia'];
   car = { name: 'Chevrolet Onix', year: 2015 };
+  loading = false;
 }

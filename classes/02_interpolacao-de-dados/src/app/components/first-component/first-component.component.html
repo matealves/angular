@@ -3,3 +3,5 @@
 <p>Profissão: {{ job }}</p>
 <p>Hobbie: {{ hobbies[0] }}</p>
 <p>Carro: {{ car.name }} - {{car.year}}</p>
+
+<p *ngIf="loading">Carregando...</p>
