@@ -1,0 +1,21 @@
+<header>
+    <h2>{{title.toUpperCase()}}</h2>
+    <small>{{subtitle}}</small>
+
+    <ul>
+        @for (item of menu; track $index) {
+        <li>
+            <a href={{item.url}}>{{item.text}}</a>
+        </li>
+        }
+    </ul>
+
+    <hr>
+
+    <ul>
+        @for (item of itens; track $index) {
+        <li>{{item.getLabel()}}</li>
+        }
+    </ul>
+
+</header>
