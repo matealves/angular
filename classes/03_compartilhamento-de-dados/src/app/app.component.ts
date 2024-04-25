@@ -6,6 +6,11 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = '01_criando-componentes';
-  test = false;
+  userName = 'Joaquim'; // dado compartilhado para outro componente
+  userData = {
+    email: 'joaquim@gmail.com',
+    role: 'Admin',
+  }; // dado compartilhado para outro componente
+
+  title = 'curso angular';
 }
