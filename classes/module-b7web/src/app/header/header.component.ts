@@ -3,15 +3,26 @@ import { ReceitaItem } from '../components/receita-item';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html',
+  // templateUrl: './header.component.html',
   styleUrls: ['./header.component.css'],
   standalone: true,
+  template: `<header>
+    <h2>{{ title.toUpperCase() }}</h2>
+    <small>{{ subtitle }}</small>
+
+    <ul>
+      @for (item of menu; track $index) {
+      <li>
+        <a href="{{ item.url }}">{{ item.text }}</a>
+      </li>
+      }
+    </ul>
+  </header>`,
 })
 export class HeaderComponent {
   title;
   subtitle;
   menu;
-  itens;
 
   constructor() {
     this.title = 'test';
@@ -20,11 +31,6 @@ export class HeaderComponent {
       { text: 'Home', url: './' },
       { text: 'Sobre', url: './' },
       { text: 'Contato', url: './' },
-    ];
-    this.itens = [
-      new ReceitaItem(1, 'Arroz', '5kg'),
-      new ReceitaItem(2, 'Feijão', '1k'),
-      new ReceitaItem(3, 'Carne', '2kg'),
     ];
   }
 }
