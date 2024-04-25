@@ -7,34 +7,28 @@ import { ReceitaItem } from './components/receita-item';
 @Component({
   selector: 'app-root',
   imports: [RouterOutlet, HeaderComponent],
-  // templateUrl: './app.component.html',
+  // templateUrl: './app.component.html', // Exercícios das Aulas
   styleUrls: ['./app.component.css'],
   standalone: true,
-  template: `<app-header></app-header>
+  template: `<div class="main">
+    <h1>{{ title }}</h1>
 
-    <div class="main">
-      <h1>{{ title }}</h1>
+    <input
+      type="text"
+      #campo
+      (keyup.enter)="addItem(campo.value); campo.value = ''"
+    />
+    <button (click)="addItem(campo.value); campo.value = ''">Adicionar</button>
 
-      <button (click)="show()">{{ mostrarText }}</button>
+    <hr />
 
-      @if(mostrarIngredientes){ @if (loading) {
-      <p>Carregando...</p>
-      } @if (!loading) {
-      <div class="list">
-        <ul>
-          @for (item of itens; track $index) {
-          <li>{{ item.getLabel() }}</li>
-          }
-        </ul>
-
-        @if (itens.length > 3) {
-        <p>Receita possui muitos ingredientes.</p>
-        }
-      </div>
-      } }
-    </div>
-
-    <router-outlet></router-outlet>`,
+    <p>Ingredientes:</p>
+    <ul>
+      @for (item of lista; track $index) {
+      <li>{{ item }}</li>
+      }
+    </ul>
+  </div>`,
 })
 export class AppComponent {
   title = 'Hello World!';
@@ -47,6 +41,15 @@ export class AppComponent {
     new ReceitaItem(3, 'Carne', '2kg'),
     new ReceitaItem(4, 'Pães', '400g'),
   ];
+  text = '';
+
+  lista: string[] = [];
+
+  addItem(item: string) {
+    if (item != '') {
+      this.lista.push(item);
+    }
+  }
 
   show() {
     if (this.mostrarIngredientes) {
@@ -56,5 +59,9 @@ export class AppComponent {
       this.mostrarIngredientes = true;
       this.mostrarText = 'Ocultar Ingredientes';
     }
+  }
+
+  atualizarTexto(value: string) {
+    this.text = value;
   }
 }
