@@ -16,7 +16,7 @@ Projetos desenvolvidos em Angular + TS, com o intuito de **estudar** e me **apro
 
 ### - Pré-requisitos globais:
 
-`npm install -g @angular/cli typescript ts-node`
+`npm install -g @angular/cli`
 
 ### - Instalação:
 
@@ -24,7 +24,7 @@ Projetos desenvolvidos em Angular + TS, com o intuito de **estudar** e me **apro
 
 ### - Rodar no server local:
 
-`npm start`
+`npm start` ou `ng serve --open`
 
 <br>
 
