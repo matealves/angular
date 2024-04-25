@@ -1,5 +1,0 @@
-Instalar:
-$ npm install -g @angular/cli
-
-Rodar:
-$npm start / ng serve / ng serve --open
