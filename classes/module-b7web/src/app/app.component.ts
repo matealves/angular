@@ -15,7 +15,9 @@ import { ReceitaItem } from './components/receita-item';
     <div class="main">
       <h1>{{ title }}</h1>
 
-      @if (loading) {
+      <button (click)="show()">{{ mostrarText }}</button>
+
+      @if(mostrarIngredientes){ @if (loading) {
       <p>Carregando...</p>
       } @if (!loading) {
       <div class="list">
@@ -29,7 +31,7 @@ import { ReceitaItem } from './components/receita-item';
         <p>Receita possui muitos ingredientes.</p>
         }
       </div>
-      }
+      } }
     </div>
 
     <router-outlet></router-outlet>`,
@@ -37,10 +39,22 @@ import { ReceitaItem } from './components/receita-item';
 export class AppComponent {
   title = 'Hello World!';
   loading = false;
+  mostrarIngredientes = false;
+  mostrarText = 'Mostrar Ingredientes';
   itens = [
     new ReceitaItem(1, 'Arroz', '5kg'),
     new ReceitaItem(2, 'Feijão', '1k'),
     new ReceitaItem(3, 'Carne', '2kg'),
     new ReceitaItem(4, 'Pães', '400g'),
   ];
+
+  show() {
+    if (this.mostrarIngredientes) {
+      this.mostrarIngredientes = false;
+      this.mostrarText = 'Mostrar Ingredientes';
+    } else {
+      this.mostrarIngredientes = true;
+      this.mostrarText = 'Ocultar Ingredientes';
+    }
+  }
 }
