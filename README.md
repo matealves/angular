@@ -1,6 +1,6 @@
 # Angular
 
-### Aulas de Angular com alguns projetos desenvolvidos para estudo.
+### Curso de Angular com alguns projetos desenvolvidos para estudo.
 
 [• Como rodar o projeto](#start)<br>
 [• Skills utilizadas](#leng)<br>
