@@ -1,6 +1,6 @@
 <div class="class">
-    <div *ngIf="canShow">Renderizado com condicional...</div>
-    <br>
+    <h2 *ngIf="canShow">Renderizado com condicional...</h2>
+    
     <div *ngIf="username === 'mateus.silva'; else nameNotFound">🟢 Online</div>
     <ng-template #nameNotFound>
         <div>❌ Acesso negado</div>
