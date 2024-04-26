@@ -22,9 +22,19 @@ Projetos desenvolvidos em Angular + TS, com o intuito de **estudar** e me **apro
 
 `npm install`
 
-### - Rodar no server local:
+### - Rodar no servidor local:
 
 `npm start` ou `ng serve --open`
+
+## - Observações de setup do projeto:
+
+### Criar um projeto novo 
+
+`ng new <name-project> --no-standalone`
+
+### Criar componente
+
+`ng generate component components/<name-component>`
 
 <br>
 
