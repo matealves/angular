@@ -26,7 +26,7 @@ Projetos desenvolvidos em Angular + TS, com o intuito de **estudar** e me **apro
 
 `npm start` ou `ng serve --open`
 
-## - Observações de setup do projeto:
+## Observações de setup do projeto:
 
 ### Criar um projeto novo 
 
