@@ -1,8 +1,12 @@
 <div class="class">
     <h3>Renderizando listas</h3>
     <ul>
-        <li *ngFor="let animal of animals">
-            Nome: {{animal.name}} --- {{animal.type}}
+        <li [ngStyle]="{ 'margin-bottom': '10px' }" *ngFor="let animal of animals">
+            Nome: {{ animal.name }} - {{ animal.type }}
+            <button (click)="showAge(animal)" [ngStyle]="{ 'margin-left': '10px' }">
+                Show age
+            </button>
         </li>
     </ul>
+    <h4>{{ animalDetails }}</h4>
 </div>
