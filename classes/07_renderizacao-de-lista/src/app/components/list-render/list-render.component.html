@@ -1,3 +1,8 @@
 <div class="class">
-    <p>Deu certo!</p>
+    <h3>Renderizando listas</h3>
+    <ul>
+        <li *ngFor="let animal of animals">
+            Nome: {{animal.name}} --- {{animal.type}}
+        </li>
+    </ul>
 </div>
