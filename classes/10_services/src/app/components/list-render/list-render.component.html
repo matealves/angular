@@ -1,10 +1,13 @@
 <div class="class">
-    <h3>Renderizando listas</h3>
+    <h3>Renderizando listas + Services</h3>
     <ul>
         <li [ngStyle]="{ 'margin-bottom': '10px' }" *ngFor="let animal of animals">
             Nome: {{ animal.name }} - {{ animal.type }}
             <button (click)="showAge(animal)" [ngStyle]="{ 'margin-left': '10px' }">
                 Show age
+            </button>
+            <button (click)="removeAnimal(animal)" [ngStyle]="{ 'margin-left': '10px', background: '#b90e0a' }">
+                Remove
             </button>
         </li>
     </ul>
