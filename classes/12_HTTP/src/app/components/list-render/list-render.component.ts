@@ -9,22 +9,23 @@ import { Animal } from '../../Animal';
   styleUrl: './list-render.component.css',
 })
 export class ListRenderComponent {
-  constructor(private listService: ListService) {}
+  constructor(private listService: ListService) {
+    this.getAnimals();
+  }
 
-  animals: Animal[] = [
-    { name: 'Turca', type: 'Dog', age: 5 },
-    { name: 'Tom', type: 'Cat', age: 2 },
-    { name: 'Frida', type: 'Dog', age: 3 },
-    { name: 'Bob', type: 'Horse', age: 8 },
-  ];
+  animals: Animal[] = [];
 
   animalDetails = '';
 
-  showAge(animal: Animal) {
+  showAge(animal: Animal): void {
     this.animalDetails = `O pet ${animal.name}, tem ${animal.age} anos de idade.`;
   }
 
-  removeAnimal(animal: Animal) {
+  getAnimals() {
+    this.listService.getAll().subscribe((animals) => (this.animals = animals));
+  }
+
+  removeAnimal(animal: Animal): void {
     console.log('Removendo animal...');
     this.animals = this.listService.remove(this.animals, animal);
   }
