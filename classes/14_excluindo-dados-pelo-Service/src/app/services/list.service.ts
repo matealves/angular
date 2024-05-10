@@ -20,7 +20,7 @@ export class ListService {
     return this.http.get<Animal>(`${this.apiURL}/${id}`);
   }
 
-  remove(animals: Animal[], animal: Animal) {
-    return animals.filter((a) => a.name !== animal.name);
+  remove(id: number) {
+    return this.http.delete<Animal>(`${this.apiURL}/${id}`);
   }
 }
