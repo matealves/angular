@@ -1,0 +1,15 @@
+<div class="class">
+    <h3>Renderizando listas com HTTP + Services</h3>
+    <ul>
+        <li [ngStyle]="{ 'margin-bottom': '10px' }" *ngFor="let animal of animals">
+            Nome: <a routerLink="/list/{{animal.id}}"> {{ animal.name }}</a> - {{ animal.type }}
+            <button (click)="showAge(animal)" [ngStyle]="{ 'margin-left': '10px' }">
+                Show age
+            </button>
+            <button (click)="removeAnimal(animal)" [ngStyle]="{ 'margin-left': '10px', background: '#b90e0a' }">
+                Remove
+            </button>
+        </li>
+    </ul>
+    <h4>{{ animalDetails }}</h4>
+</div>
