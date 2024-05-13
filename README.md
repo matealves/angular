@@ -61,4 +61,7 @@ Entre em contato através dos links a seguir!
 </p>
 <br>
 <br>
+
+# Referência
+https://github.com/matheusbattisti/curso_angular_yt/tree/main
 <br>
