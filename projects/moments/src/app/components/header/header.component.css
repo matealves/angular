@@ -25,14 +25,13 @@ nav {
   color: #dec129;
 }
 
-.links a {
-  padding: 5px;
-  border-radius: 5px;
-}
-
 .links li {
   margin-right: 1em;
   list-style: none;
+}
+
+.links a {
+  padding: 0.1em 0.3em;
 }
 
 #add a {
@@ -40,5 +39,5 @@ nav {
 }
 
 #add a:hover {
-  background-color: #444;
+  background-color: #efefef;
 }
