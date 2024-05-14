@@ -36,8 +36,11 @@ nav {
 
 #add a {
   color: #dec129;
+  transition: 0.3s;
+  border: 1px solid transparent;
+  border-radius: 5px;
 }
 
 #add a:hover {
-  background-color: #efefef;
+  border-color: #dec129;
 }
