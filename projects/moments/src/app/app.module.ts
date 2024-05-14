@@ -1,4 +1,6 @@
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   BrowserModule,
   provideClientHydration,
@@ -23,7 +25,13 @@ import { MomentFormComponent } from './components/moment-form/moment-form.compon
     NewMomentComponent,
     MomentFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [provideClientHydration()],
   bootstrap: [AppComponent],
 })
