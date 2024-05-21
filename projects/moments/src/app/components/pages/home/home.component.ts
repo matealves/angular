@@ -15,10 +15,10 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 export class HomeComponent {
   allMoments: Moment[] = [];
   moments: Moment[] = [];
-
   baseApiUrl: string = environment.baseApiUrl;
 
-  // todo search
+  faSearch = faSearch;
+  searchTerm: string = '';
 
   constructor(private momentService: MomentService) {}
 
@@ -27,5 +27,14 @@ export class HomeComponent {
       this.allMoments = data;
       this.moments = data;
     });
+  }
+
+  search(e: Event): void {
+    const target = e.target as HTMLInputElement;
+    const value = target.value.toLocaleLowerCase();
+
+    this.moments = this.allMoments.filter((moment) =>
+      moment.title.toLocaleLowerCase().includes(value)
+    );
   }
 }
