@@ -6,7 +6,8 @@
 }
 
 .home-container h1 {
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
+  font-size: 1.4em;
 }
 
 .moments-container {
@@ -25,10 +26,16 @@
 
 .moment img {
   width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
   margin-bottom: 1em;
 }
 
-.moment h3,
+.moment h3 {
+  margin-bottom: 0.5em;
+}
+
 .moment p {
   margin-bottom: 1em;
 }

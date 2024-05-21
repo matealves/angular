@@ -13,8 +13,6 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  constructor(private momentService: MomentService) {}
-
   allMoments: Moment[] = [];
   moments: Moment[] = [];
 
@@ -22,14 +20,10 @@ export class HomeComponent {
 
   // todo search
 
+  constructor(private momentService: MomentService) {}
+
   ngOnInit(): void {
     this.momentService.getMoments().subscribe(({ data }) => {
-      data.map((item) => {
-        item.created_at = new Date(item.created_at!).toLocaleDateString(
-          'pt-BR'
-        );
-      });
-
       this.allMoments = data;
       this.moments = data;
     });
