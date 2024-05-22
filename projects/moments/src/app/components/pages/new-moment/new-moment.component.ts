@@ -30,8 +30,8 @@ export class NewMomentComponent {
     }
 
     await this.momentService.createMoment(formData).subscribe();
-    
+
     this.messagesService.add('Momento adicionado com sucesso!');
-    this.router.navigate(['/']);
+    setTimeout(() => this.router.navigate(['/']), 2500);
   }
 }
