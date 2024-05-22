@@ -33,6 +33,7 @@ img {
 }
 
 .about-moment h3,
+.about-moment .description,
 .actions h3,
 .comments h3 {
   margin-bottom: 1em;

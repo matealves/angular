@@ -3,6 +3,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { MomentService } from '../../../services/moment.service';
 import { Moment } from '../../../interfaces/Moment';
+import { environment } from '../../../../environments/environment.development';
+
+import { faTimes, faEdit } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-moment',
@@ -11,6 +14,12 @@ import { Moment } from '../../../interfaces/Moment';
 })
 export class MomentComponent {
   moment?: Moment;
+  baseApiUrl = environment.baseApiUrl;
+
+  faTimes = faTimes;
+  faEdit = faEdit;
+
+  id = 1
 
   constructor(
     private momentService: MomentService,
@@ -23,4 +32,6 @@ export class MomentComponent {
       .getMoment(id)
       .subscribe(({ data }) => (this.moment = data));
   }
+
+  removeHandler(id: number){}
 }
