@@ -40,7 +40,7 @@ img {
 }
 
 .comment-container {
-  text-align: left;
+  /* text-align: left; */
   border-bottom: 1px solid #efefef;
   padding: 1em 0;
 }
@@ -50,7 +50,8 @@ img {
 }
 
 .author {
-  font-size: 0.8em;
+  margin-top: 3px;
+  font-size: 0.7em;
 }
 
 .comment-form {
@@ -59,9 +60,9 @@ img {
 
 .comment-form form {
   margin-top: 1em;
-  text-align: left;
+  /* text-align: left; */
   max-width: 300px;
-  margin-left: 0;
+  /* margin-left: 0; */
 }
 
 .author span {
