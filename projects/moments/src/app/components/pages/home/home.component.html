@@ -14,7 +14,7 @@
                 <img src="{{baseApiUrl}}/uploads/{{moment.image}}" alt="{{moment.title}}">
                 <h3>{{moment.title}}</h3>
                 <p class="date">criado em: {{moment.created_at | date:'dd/MM/yyyy HH:mm'}}</p>
-                <p>Comentários: {{moment.comments}}</p>
+                <p>Comentários: {{moment.comments!.length}}</p>
                 <p><a routerLink="moments/{{moment.id}}">Detalhes</a></p>
             </div>
         </div>

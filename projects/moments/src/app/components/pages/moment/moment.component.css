@@ -60,7 +60,7 @@ img {
 
 .comment-form form {
   margin-top: 1em;
-  /* text-align: left; */
+  text-align: left;
   max-width: 300px;
   /* margin-left: 0; */
 }
